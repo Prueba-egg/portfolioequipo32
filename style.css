@@ -1,0 +1,78 @@
+body{
+    background-color: #d5c7c7;
+}
+
+.toggle-button{
+    display: none;
+}
+
+nav{
+    background-color: rgba(127, 255, 212, 0.662);
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav li a{
+    font-size: 30px;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.subrayado{
+    text-decoration: underline;
+}
+
+nav li a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 550px) {
+
+    .menu li{
+        display: none;
+    }
+
+    .toggle-button{
+        display: inline-block; /* Cambia a inline-block */
+        margin-left: auto; /* Mueve el botón a la derecha */
+    }
+    .toggle-button svg{
+        width: 50px;
+        cursor: pointer;
+    }
+
+
+    
+    nav{
+        max-width: 400px;
+        background-color: rgba(127, 255, 212, 0.274);
+        border-radius: 20px;
+    }
+    
+    .menu{
+        display: block;
+        overflow: hidden; /* Asegura que el contenido dentro del menú no sobresalga del fondo redondeado */
+    }
+
+    .menu li{
+        padding:10px ;
+    }
+
+    .open li{
+        display:block;
+        
+    }
+
+
+}
+/*Animaciones*/
+
+.menu li{
+    transition: all ease .8s;
+}
